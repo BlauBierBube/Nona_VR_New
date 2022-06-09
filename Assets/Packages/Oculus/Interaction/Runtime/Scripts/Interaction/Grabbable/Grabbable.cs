@@ -56,7 +56,6 @@ namespace Oculus.Interaction
         protected override void Start()
         {
             this.BeginStart(ref _started, base.Start);
-
             if (OneGrabTransformer != null)
             {
                 Assert.IsNotNull(OneGrabTransformer);
