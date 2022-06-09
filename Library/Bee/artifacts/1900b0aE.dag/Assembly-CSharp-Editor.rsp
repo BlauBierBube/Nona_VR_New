@@ -463,10 +463,15 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VoiceSDK.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VoiceSDK.Runtime.ref.dll"
+"Assets/Packages/Oculus/SampleFramework/Core/Firebase/Editor/FirebaseEnabler.cs"
 "Assets/Packages/Oculus/SampleFramework/Core/Gradle/Editor/Utils.cs"
+"Assets/Packages/Oculus/SampleFramework/Core/Locomotion/Scripts/Editor/TeleportTransitionWarpInspector.cs"
+"Assets/Packages/Oculus/SampleFramework/Core/Video/Editor/AndroidVideoEditorUtil.cs"
 "Assets/Packages/Oculus/SampleFramework/Core/Video/Editor/MediaPlayerImageEditor.cs"
 "Assets/Packages/Oculus/SampleFramework/Editor/BuildAssetPackages.cs"
+"Assets/Packages/Oculus/SampleFramework/Editor/BuildSamples.cs"
 "Assets/Packages/Oculus/SampleFramework/Editor/OculusSampleFrameworkUtil.cs"
+"Assets/Packages/Oculus/SampleFramework/Usage/OVROverlayCanvas/Editor/OVROverlayCanvasEditor.cs"
 -langversion:9.0
 
 /deterministic

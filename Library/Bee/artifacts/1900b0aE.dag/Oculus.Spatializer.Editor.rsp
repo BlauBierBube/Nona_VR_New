@@ -423,7 +423,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Packages/Oculus/Spatializer/editor/ONSPAudioPluginUpdater.cs"
 "Assets/Packages/Oculus/Spatializer/editor/ONSPAudioPluginUpdaterStub.cs"
+"Assets/Packages/Oculus/Spatializer/editor/ONSPAudioSourceEditor.cs"
 "Assets/Packages/Oculus/Spatializer/editor/ONSPPropagationGeometryEditor.cs"
+"Assets/Packages/Oculus/Spatializer/editor/ONSPPropagationMaterialEditor.cs"
 "Assets/Packages/Oculus/Spatializer/editor/ONSPPropagationSerializationManager.cs"
 "Assets/Packages/Oculus/Spatializer/editor/ONSPReflectionCustomGUI.cs"
 -langversion:9.0

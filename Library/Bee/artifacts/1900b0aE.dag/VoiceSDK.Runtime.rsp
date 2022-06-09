@@ -343,6 +343,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Facebook.WitAI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Packages/Oculus/Voice/Scripts/Runtime/Bindings/Android/VoiceSDKBinding.cs"
+"Assets/Packages/Oculus/Voice/Scripts/Runtime/Bindings/Android/VoiceSDKConfigBinding.cs"
 "Assets/Packages/Oculus/Voice/Scripts/Runtime/Bindings/Android/VoiceSDKImpl.cs"
 "Assets/Packages/Oculus/Voice/Scripts/Runtime/Bindings/Android/VoiceSDKListenerBinding.cs"
 "Assets/Packages/Oculus/Voice/Scripts/Runtime/Interfaces/IPlatformVoiceService.cs"

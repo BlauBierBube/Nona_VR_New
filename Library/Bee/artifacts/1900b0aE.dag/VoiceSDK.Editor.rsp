@@ -423,12 +423,19 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VoiceSDK.Runtime.ref.dll"
+"Assets/Packages/Oculus/Voice/Scripts/Editor/Data/VoiceSDKDataCreation.cs"
+"Assets/Packages/Oculus/Voice/Scripts/Editor/Inspectors/AppVoiceExperienceEditor.cs"
 "Assets/Packages/Oculus/Voice/Scripts/Editor/Inspectors/AppVoiceExperienceWitConfigurationEditor.cs"
+"Assets/Packages/Oculus/Voice/Scripts/Editor/Upgrade/WitUpgrader.cs"
 "Assets/Packages/Oculus/Voice/Scripts/Editor/Utility/VoiceSDKMenu.cs"
 "Assets/Packages/Oculus/Voice/Scripts/Editor/Utility/VoiceSDKStyles.cs"
+"Assets/Packages/Oculus/Voice/Scripts/Editor/Utility/VoiceSDKVersion.cs"
+"Assets/Packages/Oculus/Voice/Scripts/Editor/Windows/AboutWindow.cs"
+"Assets/Packages/Oculus/Voice/Scripts/Editor/Windows/SettingsWindow.cs"
 "Assets/Packages/Oculus/Voice/Scripts/Editor/Windows/UnderstandingViewerWindow.cs"
 "Assets/Packages/Oculus/Voice/Scripts/Editor/Windows/VoiceApplicationDetailProvider.cs"
 "Assets/Packages/Oculus/Voice/Scripts/Editor/Windows/VoiceSDKWizardWindow.cs"
+"Assets/Packages/Oculus/Voice/Scripts/Editor/Windows/WelcomeWizard.cs"
 -langversion:9.0
 
 /deterministic

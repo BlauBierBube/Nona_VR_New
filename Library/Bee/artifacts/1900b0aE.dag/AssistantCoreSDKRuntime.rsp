@@ -343,6 +343,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Packages/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Runtime/Android/AndroidServiceConnection.cs"
 "Assets/Packages/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Runtime/Android/BaseAndriodConnectionImpl.cs"
+"Assets/Packages/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Runtime/Interfaces/IConnection.cs"
 "Assets/Packages/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Runtime/Utility/ArrayElementTitleAttribute.cs"
 -langversion:9.0
 

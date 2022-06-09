@@ -423,9 +423,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Packages/Oculus/AudioManager/Scripts/Audio/Editor/AudioImportPostProcessor.cs"
 "Assets/Packages/Oculus/AudioManager/Scripts/Audio/Editor/AudioManagerInspector.cs"
+"Assets/Packages/Oculus/AudioManager/Scripts/Audio/Editor/MinMaxPropertyDrawer.cs"
 "Assets/Packages/Oculus/AudioManager/Scripts/Audio/Editor/MixerSnapshotPropertyDrawer.cs"
 "Assets/Packages/Oculus/AudioManager/Scripts/Audio/Editor/OSPPropsPropertyDrawer.cs"
 "Assets/Packages/Oculus/AudioManager/Scripts/Audio/Editor/SoundFXPropertyDrawer.cs"
+"Assets/Packages/Oculus/AudioManager/Scripts/Audio/Editor/SoundFXRefPropertyDrawer.cs"
 -langversion:9.0
 
 /deterministic

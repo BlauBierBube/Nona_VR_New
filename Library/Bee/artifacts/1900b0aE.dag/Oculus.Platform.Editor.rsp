@@ -421,6 +421,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Packages/Oculus/Platform/Editor/GUIHelper.cs"
+"Assets/Packages/Oculus/Platform/Editor/OculusPlatformSettingsEditor.cs"
 "Assets/Packages/Oculus/Platform/Editor/OculusPluginUpdaterStub.cs"
 "Assets/Packages/Oculus/Platform/Editor/OculusStandalonePlatformResponse.cs"
 -langversion:9.0
