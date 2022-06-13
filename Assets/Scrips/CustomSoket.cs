@@ -55,6 +55,8 @@ public class CustomSoket : MonoBehaviour
         Target.transform.parent = Attach.transform;
         Target.transform.rotation = Attach.transform.rotation;
         Target.transform.position = Attach.transform.position;
+        SelectEnter.Invoke();
+        Debug.LogError("Invoke");
     }
 
 
