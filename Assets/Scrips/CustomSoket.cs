@@ -15,6 +15,7 @@ public class CustomSoket : MonoBehaviour
 
 
     public UnityEvent SelectEnter;
+    public UnityEvent SelectExit;
 
 
     private GameObject Target;
@@ -56,7 +57,6 @@ public class CustomSoket : MonoBehaviour
         Target.transform.rotation = Attach.transform.rotation;
         Target.transform.position = Attach.transform.position;
         SelectEnter.Invoke();
-        Debug.LogError("Invoke");
     }
 
 
@@ -95,6 +95,7 @@ public class CustomSoket : MonoBehaviour
         if ((Layer.value & (1 << other.transform.gameObject.layer)) > 0)
         {
             DestroyHoverObject();
+            
         }
     }
 }
