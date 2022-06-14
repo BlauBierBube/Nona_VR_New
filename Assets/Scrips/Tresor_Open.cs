@@ -20,15 +20,10 @@ public class Tresor_Open : MonoBehaviour
         
     }
 
-    public void FreezeAll()
-    {
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll; 
-    }
 
-    public void UnfreezeAll()
-    {
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
+    public void Open_Text()
+    {
         TresorTextObject.text = TresorText;
     }
 

@@ -6,8 +6,9 @@ using UnityEngine.Events;
 
 public class Power_Switch : MonoBehaviour
 {
-    private float targetRotation = 50;
+    private float targetRotation = -40;
     public TextMeshPro Textfeld;
+
 
     public UnityEvent onSolved;
 
@@ -15,22 +16,15 @@ public class Power_Switch : MonoBehaviour
     void Start()
     {
         Textfeld.text = "Power Off";
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
 
-    public void FreezeNone()
+    private void Update()
     {
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-    }
-
-    public void FreezeAll()
-    {
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-
-
-        if (Mathf.Round(transform.eulerAngles.x) > targetRotation)
+        if (transform.eulerAngles.x == targetRotation)
         {
             Textfeld.text = "Power On";
+            Debug.LogError("Power ON");
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             onSolved.Invoke();
         }
     }

@@ -21,6 +21,7 @@ public class CustomSoket : MonoBehaviour
     private GameObject Target;
     private GameObject hoverObject;
     private GameObject realObject;
+    private bool wasInSoket = false;
 
     void Start()
     {
@@ -42,7 +43,11 @@ public class CustomSoket : MonoBehaviour
             //Debug.LogError(other.gameObject.name +" Hit with Layermask");
             Target = other.gameObject;
             HoverObject();
-
+            if (Target.GetComponentInParent<Grabbable>()._activeTransformer != null && wasInSoket == true)
+            {
+                SelectExit.Invoke();
+                wasInSoket = false;
+            }
 
             if (Target.GetComponentInParent<Grabbable>()._activeTransformer == null)
             {
@@ -57,6 +62,11 @@ public class CustomSoket : MonoBehaviour
         Target.transform.rotation = Attach.transform.rotation;
         Target.transform.position = Attach.transform.position;
         SelectEnter.Invoke();
+<<<<<<< Updated upstream
+=======
+        wasInSoket = true;
+        Debug.LogError("Invoke");
+>>>>>>> Stashed changes
     }
 
 
