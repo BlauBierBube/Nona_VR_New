@@ -5,6 +5,7 @@ namespace LevelUP.Dial
 {
     public class Rotator : MonoBehaviour
     {
+        /*
         public Transform linkedDial;
 
         [SerializeField] private int snapRotationAmout = 25;

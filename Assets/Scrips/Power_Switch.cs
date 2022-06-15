@@ -6,10 +6,10 @@ using UnityEngine.Events;
 
 public class Power_Switch : MonoBehaviour
 {
-    private float targetRotation = -40;
+    private float targetRotation = 80;
     public TextMeshPro Textfeld;
 
-
+    private bool isActiv = false;
     public UnityEvent onSolved;
 
     // Start is called before the first frame update
@@ -20,12 +20,16 @@ public class Power_Switch : MonoBehaviour
 
     private void Update()
     {
-        if (transform.eulerAngles.x == targetRotation)
+        if (transform.localEulerAngles.x >= targetRotation && isActiv == false)
         {
-            Textfeld.text = "Power On";
-            Debug.LogError("Power ON");
-            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            onSolved.Invoke();
+            PowerOn();
         }
+    }
+    private void PowerOn()
+    {
+        Textfeld.text = "Power On";
+        Debug.LogError("Power ON");
+        onSolved.Invoke();
+        isActiv = true;
     }
 }
