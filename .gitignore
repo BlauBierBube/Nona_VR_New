@@ -70,25 +70,3 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-
-
-Library/ArtifactDB
-Library/Artifacts/1c/1c17f56144a6df3f86fb7fa333d9c33b
-Library/Artifacts/31/31d85edcb030f9713ebe8197492529fb
-Library/Artifacts/45/451725249c22549411dc0a7d3546d3e2
-Library/Artifacts/6e/6ec06159217e4955a72fc798ef390aab
-Library/Artifacts/8f/8f473fc71fa37f4550b2dc820a0044cc
-Library/Artifacts/96/9659daf8bda497e6db5e0f0fd681e531
-Library/Artifacts/dc/dc4a128dc901b32842b5749cf5fec6f1
-Library/Bee/backend_profiler0.traceevents
-Library/Bee/fullprofile.json
-Library/Bee/tundra.digestcache
-Library/Bee/tundra.log.json
-Library/Bee/TundraBuildState.state
-Library/Bee/TundraBuildState.state.map
-Library/SceneVisibilityState.asset
-Library/ShaderCache/EditorEncounteredVariants
-Library/SourceAssetDB
-Logs/AssetImportWorker0-prev.log
-Logs/AssetImportWorker1-prev.log
-Logs/shadercompiler-UnityShaderCompiler.exe0.log
