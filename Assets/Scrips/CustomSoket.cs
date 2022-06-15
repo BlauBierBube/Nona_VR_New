@@ -17,7 +17,7 @@ public class CustomSoket : MonoBehaviour
     public UnityEvent SelectEnter;
     public UnityEvent SelectExit;
 
-
+    private int count = 0;
     private GameObject Target;
     private GameObject hoverObject;
     private GameObject realObject;
@@ -45,6 +45,7 @@ public class CustomSoket : MonoBehaviour
             HoverObject();
             if (Target.GetComponentInParent<Grabbable>()._activeTransformer != null && wasInSoket == true)
             {
+                count = 0;
                 SelectExit.Invoke();
                 wasInSoket = false;
             }
@@ -57,22 +58,27 @@ public class CustomSoket : MonoBehaviour
     }
     private void PlaceAtSoket()
     {
-        DestroyHoverObject();
-        Target.transform.parent = Attach.transform;
-        Target.transform.rotation = Attach.transform.rotation;
-        Target.transform.position = Attach.transform.position;
-        SelectEnter.Invoke();
 
-        wasInSoket = true;
-        Debug.LogError("Invoke");
+        if (count == 0)
+        {
+            DestroyHoverObject();
 
+            Target.transform.parent = Attach.transform;
+            Target.transform.rotation = Attach.transform.rotation;
+            Target.transform.position = Attach.transform.position;
+
+            SelectEnter.Invoke();
+
+            wasInSoket = true;
+            count = 1;
+        }
     }
 
 
 
     private void HoverObject()
     {
-        if(hoverObject == null)
+        if(hoverObject == null && wasInSoket == false)
         {
             //Debug.LogError("Hover Active");
             hoverObject = Instantiate(Target, Attach.transform.position, Attach.transform.rotation);

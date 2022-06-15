@@ -9,7 +9,7 @@ public class PlayAnimation_Screw : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = gameObject.GetComponent<Animator>();
     }
 
    public void Screwdriver_Socket_Enter()
