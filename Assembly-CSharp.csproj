@@ -60,7 +60,10 @@
     <Compile Include="Assets\Packages\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportAimHandlerParabolic.cs" />
     <Compile Include="Assets\Packages\Oculus\SampleFramework\Usage\Firebase\StartCrashlytics.cs" />
     <Compile Include="Assets\Packages\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\HandsActiveChecker.cs" />
+    <Compile Include="Assets\Scrips\OneGrabKnobTransformer.cs" />
+    <Compile Include="Assets\Scrips\ReplaceWithPrefab.cs" />
     <Compile Include="Assets\Packages\Oculus\SampleFramework\Usage\Passthrough\Scripts\PassthroughProjectionSurface.cs" />
+    <Compile Include="Assets\Scrips\CheckRotation.cs" />
     <Compile Include="Assets\Packages\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\CowController.cs" />
     <Compile Include="Assets\Packages\Oculus\SampleFramework\Usage\Passthrough\Scripts\HandMeshUI.cs" />
     <Compile Include="Assets\Packages\Oculus\SampleFramework\Core\CustomHands\Scripts\HandPose.cs" />
@@ -188,7 +191,6 @@
     <Compile Include="Assets\Packages\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\AnchorUIManager.cs" />
     <Compile Include="Assets\Packages\Oculus\SampleFramework\Usage\Passthrough\Scripts\SelectivePassthroughExperience.cs" />
     <Compile Include="Assets\Packages\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\TrackSegment.cs" />
-    <Compile Include="Assets\Scrips\OneGrabKnobTransformer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\XingLightShader.shader" />
