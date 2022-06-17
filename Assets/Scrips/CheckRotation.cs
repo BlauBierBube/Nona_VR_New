@@ -6,33 +6,90 @@ using TMPro;
 public class CheckRotation : MonoBehaviour
 {
     public TextMeshPro Textfield;
-    private Vector3 currentAngle;
-    private Vector3 lastAngle;
+    public TextMeshPro Textfield1;
 
+    private Vector3 oldRotation;
+    private Vector3 currentRotation;
+
+
+    private bool isRight = false;
+    /*
+    private float FrequenceBereichText = 100;
+    private float Bereich = 10;
+    private float Frequence = 360;
+    private float Count = 0;
+    private bool turnRight = false;
+    */
+
+    public AudioSource Noice;
+    public AudioSource Text;
+
+
+    void Update()
+    {
+        if (currentRotation != transform.eulerAngles)
+        {
+            oldRotation = currentRotation;
+            currentRotation = transform.eulerAngles;
+            Textfield.text = Mathf.Round(currentRotation.y) + "";
+            isRight = GetRotateDirection(oldRotation, currentRotation);
+            if (isRight == true)
+                Textfield1.text = "Positiv";
+            if (isRight == false)
+                Textfield1.text = "Negativ";
+        }
+    }
+
+
+    // return true if rotating clockwise
+    // return false if rotating counterclockwise
+    bool GetRotateDirection(Vector3 from, Vector3 to)
+    {
+        float fromY = from.y;
+        float toY = to.y;
+        float clockWise = 0f;
+        float counterClockWise = 0f;
+
+        if (fromY <= toY)
+        {
+            clockWise = toY - fromY;
+            counterClockWise = fromY + (360 - toY);
+        }
+        else
+        {
+            clockWise = (360 - fromY) + toY;
+            counterClockWise = fromY - toY;
+        }
+        return (clockWise <= counterClockWise);
+    } 
+}
+
+    /*
     // Update is called once per frame
     void Update()
     {
-        if(currentAngle != transform.localEulerAngles)
+        
+        if(currentAngle != transform.localEulerAngles.y)
         {
-            lastAngle = currentAngle;
-            currentAngle = transform.localEulerAngles;
+            currentAngle = transform.localEulerAngles.y;
 
-            float Angle = Mathf.Sign(Vector3.SignedAngle(lastAngle, currentAngle, Vector3.up));
-            // Debug.LogError(Angle);
+            Textfield.text = Mathf.Round(currentAngle) + "";
 
 
-            // is 1 if its positive and -1 if its negative
-            if (Angle == 1f) // Positiv
+            if (currentAngle >= (FrequenceBereichText - (Bereich / 2)))
             {
-
-                Textfield.text = Mathf.Round(transform.localEulerAngles.y) + "";
-                //Debug.LogError("Rotation is Positive");
+            Noice.volume = (Noice.volume + (currentAngle - FrequenceBereichText) / 10);
+            Textfield1.text = Noice.volume + " Volumen";
+            //Debug.LogError(Noice.volume);
             }
-            if(Angle == -1f) // Negativ
+            if (currentAngle <= (FrequenceBereichText + (Bereich / 2))) 
             {
-                Textfield.text = Mathf.Round(transform.localEulerAngles.y) + "";
-                //Debug.LogError("Rotation is Negative");
+            Noice.volume = (Noice.volume - (currentAngle - FrequenceBereichText) / 10);
+            Textfield1.text = Noice.volume + " Volumen";
             }
+            else
+                Noice.volume = 1;
         }
-    }
 }
+
+
