@@ -2,44 +2,89 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Oculus.Interaction;
 
 public class CheckRotation : MonoBehaviour
 {
     public TextMeshPro Textfield;
     public TextMeshPro Textfield1;
+    public TextMeshPro Textfield2;
 
     private Vector3 oldRotation;
     private Vector3 currentRotation;
 
 
     private bool isRight = false;
-    /*
+    
     private float FrequenceBereichText = 100;
     private float Bereich = 10;
     private float Frequence = 360;
     private float Count = 0;
     private bool turnRight = false;
-    */
+    
 
     public AudioSource Noice;
     public AudioSource Text;
+    public AudioSource Text1;
 
+    private void Start()
+    {
+        Text.volume = 0;
+        Text1.volume = 0;
 
+    }
     void Update()
     {
-        if (currentRotation != transform.eulerAngles)
+        if (gameObject.GetComponent<Grabbable>()._activeTransformer != null)
         {
             oldRotation = currentRotation;
             currentRotation = transform.eulerAngles;
-            Textfield.text = Mathf.Round(currentRotation.y) + "";
+
+            Textfield.text = Mathf.Round(transform.eulerAngles.y) + "";
+
+            /*
             isRight = GetRotateDirection(oldRotation, currentRotation);
             if (isRight == true)
-                Textfield1.text = "Positiv";
+                Textfield1.text = Mathf.Round(this.transform.rotation.eulerAngles.y) + "";
             if (isRight == false)
-                Textfield1.text = "Negativ";
+                Textfield1.text = Mathf.Round(this.transform.rotation.eulerAngles.y) + "";
+            */
+            // bis hier geht es
+
+            // 95 - 100
+            // ( 95 - 100 >= 95  && 95 -100 <= 100
+            if (currentRotation.y >= (FrequenceBereichText - (Bereich / 2)) && currentRotation.y <= FrequenceBereichText)
+            {
+                // (( 0 - 5 ) * ( 100/ ( 10 / 2)) /100
+                Noice.volume = (((FrequenceBereichText - currentRotation.y) * (100 / (Bereich / 2))) / 100);
+                Text.volume = 1-Noice.volume;
+            }
+
+            // 100 - 105
+            if (currentRotation.y <= (FrequenceBereichText + (Bereich / 2)) && currentRotation.y >= FrequenceBereichText)
+            {
+                // (( 0 - 5 ) * ( 100/ ( 10 / 2)) /100
+                Noice.volume = (((currentRotation.y - FrequenceBereichText) * (100 / (Bereich / 2))) / 100);
+                Text.volume = 1-Noice.volume;
+            }
+            
+
+            Textfield1.text = Noice.volume + " V.Noice";
+            Textfield2.text = Text.volume + " V.Text";
+            //if user is 2 Sek in FrequenceBereichText than start Audio Text 2
+            while(currentRotation.y <= (FrequenceBereichText+1) || currentRotation.y >= (FrequenceBereichText - 1))
+            {
+                StartCoroutine(Wait2Sec());
+                Text.volume = 0;
+                Text1.volume = 1;
+            }
+
         }
     }
-
+    IEnumerator Wait2Sec()
+    {
+        yield return new WaitForSeconds(2);
+    }
 
     // return true if rotating clockwise
     // return false if rotating counterclockwise
@@ -63,33 +108,3 @@ public class CheckRotation : MonoBehaviour
         return (clockWise <= counterClockWise);
     } 
 }
-
-    /*
-    // Update is called once per frame
-    void Update()
-    {
-        
-        if(currentAngle != transform.localEulerAngles.y)
-        {
-            currentAngle = transform.localEulerAngles.y;
-
-            Textfield.text = Mathf.Round(currentAngle) + "";
-
-
-            if (currentAngle >= (FrequenceBereichText - (Bereich / 2)))
-            {
-            Noice.volume = (Noice.volume + (currentAngle - FrequenceBereichText) / 10);
-            Textfield1.text = Noice.volume + " Volumen";
-            //Debug.LogError(Noice.volume);
-            }
-            if (currentAngle <= (FrequenceBereichText + (Bereich / 2))) 
-            {
-            Noice.volume = (Noice.volume - (currentAngle - FrequenceBereichText) / 10);
-            Textfield1.text = Noice.volume + " Volumen";
-            }
-            else
-                Noice.volume = 1;
-        }
-}
-
-
