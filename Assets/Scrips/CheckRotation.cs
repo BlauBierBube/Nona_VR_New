@@ -15,11 +15,12 @@ public class CheckRotation : MonoBehaviour
 
 
     private bool isRight = false;
-    
-    private float FrequenceBereichText = 100;
-    private float Bereich = 10;
-    private float Frequence = 360;
-    private float Count = 0;
+    private float Rotations = 0;
+
+
+    public float FrequenceBereichText = 100;
+    public float Bereich = 10;
+
     private bool turnRight = false;
     
 
@@ -35,7 +36,7 @@ public class CheckRotation : MonoBehaviour
     }
     void Update()
     {
-        if (gameObject.GetComponent<Grabbable>()._activeTransformer != null)
+        if (true)//gameObject.GetComponent<Grabbable>()._activeTransformer != null)
         {
             oldRotation = currentRotation;
             currentRotation = transform.eulerAngles;
@@ -49,7 +50,10 @@ public class CheckRotation : MonoBehaviour
             if (isRight == false)
                 Textfield1.text = Mathf.Round(this.transform.rotation.eulerAngles.y) + "";
             */
-            // bis hier geht es
+
+            if (currentRotation.y == 360)
+                Rotations++;
+
 
             // 95 - 100
             // ( 95 - 100 >= 95  && 95 -100 <= 100
@@ -69,8 +73,9 @@ public class CheckRotation : MonoBehaviour
             }
             
 
-            Textfield1.text = Noice.volume + " V.Noice";
-            Textfield2.text = Text.volume + " V.Text";
+            Textfield1.text = Mathf.Round(Noice.volume) + " V.Noice";
+            Textfield2.text = Mathf.Round(Text.volume) + " V.Text";
+            
             //if user is 2 Sek in FrequenceBereichText than start Audio Text 2
             while(currentRotation.y <= (FrequenceBereichText+1) || currentRotation.y >= (FrequenceBereichText - 1))
             {
@@ -78,7 +83,7 @@ public class CheckRotation : MonoBehaviour
                 Text.volume = 0;
                 Text1.volume = 1;
             }
-
+            
         }
     }
     IEnumerator Wait2Sec()

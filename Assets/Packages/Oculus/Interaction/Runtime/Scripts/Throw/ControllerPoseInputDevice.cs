@@ -21,6 +21,7 @@ namespace Oculus.Interaction.Throw
     /// </summary>
     public class ControllerPoseInputDevice : MonoBehaviour, IPoseInputDevice
     {
+        
         [SerializeField, Interface(typeof(IController))]
         private MonoBehaviour _controller;
         public IController Controller { get; private set; }
