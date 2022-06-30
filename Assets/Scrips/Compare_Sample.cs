@@ -9,9 +9,14 @@ public class Compare_Sample : MonoBehaviour
     private string SampleName2 = "Sample_2";
     private string SampleName3 = "Sample_3";
 
-    private int Count = 0;
+    public UnityEvent OnCountGreen;
+    public UnityEvent OnCountOrange;
+    public UnityEvent OnCountPurple;
 
-    public UnityEvent OnSolved;
+    public UnityEvent SubtractCountCountGreen;
+    public UnityEvent SubtractCountOrange;
+    public UnityEvent SubtractCountPurple;
+
 
 
     // Start is called before the first frame update
@@ -24,10 +29,7 @@ public class Compare_Sample : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Count == 3)
-        {
-            Solved();
-        }
+     
     }
 
     public void CompareSampleGreen()   
@@ -37,8 +39,8 @@ public class Compare_Sample : MonoBehaviour
 
         if (SampleName1 == gameObject.name)
         {
-            Count = Count + 1;
-            Debug.Log("Green Sample Correct");
+            OnCountGreen.Invoke();
+            Debug.Log("Green Sample Correct ");
         }
     }
 
@@ -49,8 +51,8 @@ public class Compare_Sample : MonoBehaviour
 
         if (SampleName1 == gameObject.name)
         {
-            Count = Count - 1;
-            Debug.Log("GreenExit Count -1");
+            SubtractCountCountGreen.Invoke();
+            Debug.Log("GreenExit Count -1 ");
         }
     }
 
@@ -61,8 +63,8 @@ public class Compare_Sample : MonoBehaviour
 
         if (SampleName2 == gameObject.name)
         {
-            Count = Count + 1;
-            Debug.Log("Purple Sample Correct");
+            OnCountPurple.Invoke();
+            Debug.Log("Purple Sample Correct ");
 
         }
     }
@@ -74,8 +76,8 @@ public class Compare_Sample : MonoBehaviour
 
         if (SampleName2 == gameObject.name)
         {
-            Count = Count - 1;
-            Debug.Log("PurpleExit Count -1");
+            SubtractCountPurple.Invoke();
+            Debug.Log("PurpleExit Count -1 ");
 
         }
     }
@@ -86,8 +88,9 @@ public class Compare_Sample : MonoBehaviour
 
         if (SampleName3 == gameObject.name)
         {
-            Count = Count + 1;
-            Debug.Log("Orange Sample Correct");
+            OnCountOrange.Invoke();
+
+            Debug.Log("Orange Sample Correct ");
 
         }
     }
@@ -98,14 +101,9 @@ public class Compare_Sample : MonoBehaviour
 
         if (SampleName3 == gameObject.name)
         {
-            Count = Count - 1;
-            Debug.Log("OrangeExit Count -1");
+            SubtractCountOrange.Invoke();
+            Debug.Log("OrangeExit Count -1 ");
 
         }
-    }
-
-    public void Solved()
-    {
-        OnSolved.Invoke();
     }
 }
