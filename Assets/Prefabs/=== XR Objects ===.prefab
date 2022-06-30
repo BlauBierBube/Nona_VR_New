@@ -8151,7 +8151,7 @@ Transform:
   m_Children:
   - {fileID: 8100219551988131873}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7195111987935143344
 PrefabInstance:
@@ -9281,7 +9281,6 @@ PrefabInstance:
     - {fileID: 313268214359804209, guid: c9534dbf8cbd4af49a8d0ad99fb73778, type: 3}
     - {fileID: 313268214359804213, guid: c9534dbf8cbd4af49a8d0ad99fb73778, type: 3}
     - {fileID: 313268214359804202, guid: c9534dbf8cbd4af49a8d0ad99fb73778, type: 3}
-    - {fileID: 313268214359804203, guid: c9534dbf8cbd4af49a8d0ad99fb73778, type: 3}
     - {fileID: 313268214359804201, guid: c9534dbf8cbd4af49a8d0ad99fb73778, type: 3}
     - {fileID: 313268214359804214, guid: c9534dbf8cbd4af49a8d0ad99fb73778, type: 3}
     m_AddedGameObjects: []
@@ -9662,6 +9661,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6781686663965806210, guid: e7fbb376593cff24f9db4ecf8d465aaf, type: 3}
   m_PrefabInstance: {fileID: 8100219553842066131}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8100219552996577426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3347483850136779857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff26c21ac005534e8af75f8427be9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _snappers:
+  - {fileID: 493818913796833960}
+  _syntheticHand: {fileID: 528681139122176611}
 --- !u!114 &8100219552996577453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9680,21 +9694,6 @@ MonoBehaviour:
   _glowColorLerpSpeed: 4
   _fingerGlowColorWithInteractable: {r: 1, g: 0.82, b: 0.45, a: 1}
   _fingerGlowColorWithNoInteractable: {r: 0.44, g: 0.56, b: 0.57, a: 1}
---- !u!114 &8100219552996577426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3347483850136779857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ff26c21ac005534e8af75f8427be9d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _snappers:
-  - {fileID: 493818913796833960}
-  _syntheticHand: {fileID: 528681139122176611}
 --- !u!114 &4159175287063565921 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5319201029251409074, guid: e7fbb376593cff24f9db4ecf8d465aaf, type: 3}
