@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    public bool down;
+    public bool isOnTargetPos;
     public float speed = 1f;
     public Vector3 target;
     public GameObject Rig;
@@ -15,7 +15,7 @@ public class Elevator : MonoBehaviour
 
     public void Update()
     {
-        if (down == true && transform.position != target)
+        if (isOnTargetPos == true && transform.position != target)
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target, step);
@@ -24,6 +24,6 @@ public class Elevator : MonoBehaviour
     }
     public void Down()
     {
-        down = true;
+        isOnTargetPos = true;
     }
 }

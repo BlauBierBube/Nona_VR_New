@@ -8,7 +8,7 @@ public class PinCode2 : MonoBehaviour
 {
     public string RightPinCode;
     public TextMeshPro CodeTextMesh;
-
+    public Material material;
     public UnityEvent onSolved;
 
     // Start is called before the first frame update
@@ -43,7 +43,8 @@ public class PinCode2 : MonoBehaviour
             Debug.Log("Unlocked!");
 
             CodeTextMesh.color = new Color32(0, 254, 111, 255);
-
+            if(material != null)
+                material.SetColor("_BaseColor", new Color(0.3361072f, 0.7830188f, 0.3612165f, 1));
             onSolved.Invoke();
 
             this.enabled = false;
