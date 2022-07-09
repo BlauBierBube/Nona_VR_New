@@ -20,13 +20,17 @@ public class Freeze_Rigidbody : MonoBehaviour
 
     public void FreezeAll()
     {
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll; 
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        //GetComponentInChildren<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll; 
     }
 
     public void UnfreezeAll()
     {
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        //GetComponentInChildren<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
+
+
 
 
 }

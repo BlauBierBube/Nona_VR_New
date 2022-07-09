@@ -11,8 +11,10 @@ public class CustomSoket : MonoBehaviour
     public LayerMask Layer;
     public GameObject Attach;
     public Material HoverMat;
-
-
+    private Material[] mat;
+    private Rigidbody rig;
+    public bool Freeze = false;
+    public bool wasInSoket = false;
 
     public UnityEvent SelectEnter;
     public UnityEvent SelectExit;
@@ -21,7 +23,7 @@ public class CustomSoket : MonoBehaviour
     private GameObject Target;
     private GameObject hoverObject;
     private GameObject realObject;
-    private bool wasInSoket = false;
+
 
     void Start()
     {
@@ -47,6 +49,12 @@ public class CustomSoket : MonoBehaviour
             {
                 count = 0;
                 SelectExit.Invoke();
+
+                if (Freeze == true)
+                {
+                    rig.constraints = RigidbodyConstraints.None;
+                }
+
                 wasInSoket = false;
             }
 
@@ -66,6 +74,12 @@ public class CustomSoket : MonoBehaviour
             Target.transform.parent = Attach.transform;
             Target.transform.rotation = Attach.transform.rotation;
             Target.transform.position = Attach.transform.position;
+            if (Freeze == true)
+            {
+                rig = Target.GetComponent<Rigidbody>();
+                rig.constraints = RigidbodyConstraints.FreezeAll;
+            }
+
 
             SelectEnter.Invoke();
 
@@ -78,16 +92,32 @@ public class CustomSoket : MonoBehaviour
 
     private void HoverObject()
     {
-        if(hoverObject == null && wasInSoket == false)
+        if (hoverObject == null && wasInSoket == false)
         {
             //Debug.LogError("Hover Active");
             hoverObject = Instantiate(Target, Attach.transform.position, Attach.transform.rotation);
             hoverObject.transform.parent = Attach.transform;
             hoverObject.layer = 0;
             hoverObject.GetComponent<Collider>().enabled = false;
-            hoverObject.GetComponent<MeshRenderer>().material = HoverMat;
+
+            //hoverObject.GetComponent<MeshRenderer>().material = HoverMat;
+
+            MeshRenderer[] ren;
+            ren = hoverObject.GetComponents<MeshRenderer>();
+            foreach (MeshRenderer rend in ren)
+            {
+                var mats = new Material[rend.materials.Length];
+                for (var j = 0; j < rend.materials.Length; j++)
+                {
+                    mats[j] = HoverMat;
+                }
+                rend.materials = mats;
+            }
         }
+
     }
+
+
     private void DestroyHoverObject()
     {
         if (hoverObject)

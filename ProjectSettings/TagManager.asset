@@ -12,11 +12,13 @@ TagManager:
   - Water
   - UI
   - Mug
-  - Battery
+  - 
   - Screwdriver
   - Labor_Sample
   - Power_Keycard
   - 
+  - Battery_Empty
+  - Battery_Full
   - 
   - 
   - 
@@ -32,10 +34,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Light
+  - PostProcess
   - 
   m_SortingLayers:
   - name: Default
