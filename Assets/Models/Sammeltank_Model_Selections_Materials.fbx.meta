@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Erhoehung_1
-    second: {fileID: 2100000, guid: f948bee01e40013448657bd47622bd39, type: 2}
+    second: {fileID: 2100000, guid: 27a3a488449481e45b81b263332165a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -28,7 +28,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Tank_Fenster
-    second: {fileID: 2100000, guid: f948bee01e40013448657bd47622bd39, type: 2}
+    second: {fileID: 2100000, guid: 27a3a488449481e45b81b263332165a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
