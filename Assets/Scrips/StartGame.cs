@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class StartGame : MonoBehaviour
 {
+
+    public AudioSource Explosion;
+
     // Start is called before the first frame update
-    void Start()
+    void OnLevelWasLoaded()
     {
-        VibrationManager.singleton.TriggerVibration(40, 2, 255, OVRInput.Controller.All);
+        Invoke("startgame", 10f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Vibrate()
     {
-        
+        OVRInput.SetControllerVibration(0.5f, 0.8f, OVRInput.Controller.All);
+    }
+
+    public void startgame()
+    {
+        OVRInput.SetControllerVibration(0.5f, 0.8f, OVRInput.Controller.All);
+        Explosion.Play();
     }
 }
