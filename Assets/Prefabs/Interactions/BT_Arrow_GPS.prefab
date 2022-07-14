@@ -32,9 +32,13 @@ PrefabInstance:
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4446762793576146268, guid: bd52dcdbdacb5fb4e941f38fc73dd028, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3505986912482591185, guid: a7e6228cdadc45847a7b8ab96c53c339, type: 3}
     - target: {fileID: 7278728555216982118, guid: bd52dcdbdacb5fb4e941f38fc73dd028, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7278728555216982118, guid: bd52dcdbdacb5fb4e941f38fc73dd028, type: 3}
       propertyPath: m_LocalScale.x
@@ -88,9 +92,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7825358700853968654, guid: bd52dcdbdacb5fb4e941f38fc73dd028, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5124302946502108439, guid: a7e6228cdadc45847a7b8ab96c53c339, type: 3}
     - target: {fileID: 7946862826369518300, guid: bd52dcdbdacb5fb4e941f38fc73dd028, type: 3}
       propertyPath: m_Name
-      value: BT_Arrow
+      value: BT_Arrow_GPS
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

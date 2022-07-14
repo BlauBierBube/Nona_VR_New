@@ -57,9 +57,10 @@ namespace Oculus.Interaction.Input
 
                 capsule.CapsuleRigidbody = new GameObject((boneTransform.name).ToString() + "_CapsuleRigidbody")
                     .AddComponent<Rigidbody>();
-                capsule.CapsuleRigidbody.mass = 1.0f;
+                capsule.CapsuleRigidbody.mass = 100.0f;
                 capsule.CapsuleRigidbody.isKinematic = true;
                 capsule.CapsuleRigidbody.useGravity = false;
+
                 capsule.CapsuleRigidbody.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
 
                 GameObject rbGO = capsule.CapsuleRigidbody.gameObject;
@@ -140,7 +141,7 @@ namespace Oculus.Interaction.Input
                 if (_capsulesAreActive)
                 {
                     Transform boneTransform = _handVisual.Joints[(int)capsule.BoneIndex];
-
+                    
                     if (capsuleGO.activeSelf)
                     {
                         capsule.CapsuleRigidbody.MovePosition(boneTransform.position);
@@ -151,7 +152,20 @@ namespace Oculus.Interaction.Input
                         capsuleGO.SetActive(true);
                         capsule.CapsuleRigidbody.position = boneTransform.position;
                         capsule.CapsuleRigidbody.rotation = boneTransform.rotation;
+                    } /*
+                    if (capsuleGO.activeSelf)
+                    {
+                        capsuleGO.SetActive(false);
+                        capsuleGO.SetActive(true);
+                        capsule.CapsuleRigidbody.MovePosition(boneTransform.position);
+                        capsule.CapsuleRigidbody.MoveRotation(boneTransform.rotation);
                     }
+                    else
+                    {
+                        capsuleGO.SetActive(true);
+                        capsule.CapsuleRigidbody.gameObject.transform.position = boneTransform.position;
+                        capsule.CapsuleRigidbody.gameObject.transform.rotation = boneTransform.rotation;
+                    }*/
                 }
                 else
                 {
