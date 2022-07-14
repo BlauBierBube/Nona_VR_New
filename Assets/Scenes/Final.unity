@@ -4114,11 +4114,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7492527064348379800, guid: fc148919c7151344ebc8a6e821d5fbb6, type: 3}
   m_PrefabInstance: {fileID: 334511199}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &337216345 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6014187118312249980, guid: 547c163ce8f0c4b40bef8ccd1c054912, type: 3}
-  m_PrefabInstance: {fileID: 1918092733920260522}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &347457474
 GameObject:
   m_ObjectHideFlags: 0
@@ -14934,7 +14929,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1954952080164020103, guid: 1555b12b9d551a742bec31178edff04d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4720855711237847913, guid: 1555b12b9d551a742bec31178edff04d, type: 3}
       propertyPath: m_RootOrder
@@ -14942,15 +14937,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4720855711237847913, guid: 1555b12b9d551a742bec31178edff04d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.406
+      value: -4.45
       objectReference: {fileID: 0}
     - target: {fileID: 4720855711237847913, guid: 1555b12b9d551a742bec31178edff04d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.858
+      value: 1.126
       objectReference: {fileID: 0}
     - target: {fileID: 4720855711237847913, guid: 1555b12b9d551a742bec31178edff04d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.669
+      value: -2.19
       objectReference: {fileID: 0}
     - target: {fileID: 4720855711237847913, guid: 1555b12b9d551a742bec31178edff04d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18083,7 +18078,7 @@ PrefabInstance:
     - target: {fileID: 5070859460273552374, guid: bd64e0d7389a8d94fb12ad0f06650259, type: 3}
       propertyPath: SelectExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 337216345}
+      objectReference: {fileID: 0}
     - target: {fileID: 5070859460273552374, guid: bd64e0d7389a8d94fb12ad0f06650259, type: 3}
       propertyPath: SelectExit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -18091,7 +18086,7 @@ PrefabInstance:
     - target: {fileID: 5070859460273552374, guid: bd64e0d7389a8d94fb12ad0f06650259, type: 3}
       propertyPath: SelectEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 337216345}
+      objectReference: {fileID: 0}
     - target: {fileID: 5070859460273552374, guid: bd64e0d7389a8d94fb12ad0f06650259, type: 3}
       propertyPath: SelectEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -72208,7 +72203,7 @@ MonoBehaviour:
   BatteryLock:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 337216345}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -112789,7 +112784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8100219552331385136
 Transform:
   m_ObjectHideFlags: 0
@@ -115050,7 +115045,7 @@ CharacterController:
   m_GameObject: {fileID: 8100219552909696982}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
@@ -116810,7 +116805,7 @@ PrefabInstance:
     - target: {fileID: 313268214359804204, guid: c9534dbf8cbd4af49a8d0ad99fb73778, type: 3}
       propertyPath: CameraRig
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8100219551944456529}
     - target: {fileID: 313268214359804204, guid: c9534dbf8cbd4af49a8d0ad99fb73778, type: 3}
       propertyPath: PlayerController
       value: 
