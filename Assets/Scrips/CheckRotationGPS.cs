@@ -126,6 +126,9 @@ public class CheckRotationGPS : MonoBehaviour
         {
             Text.volume = 0;
             Noice.volume = 0;
+            Text.Stop();
+            Noice.Stop();
+            Text1.Play();
             Text1.volume = 1;
             onSolved.Invoke();
             StopAllCoroutines();
