@@ -5,10 +5,12 @@ using UnityEngine;
 public class DoorCollider_isTrigger : MonoBehaviour
 {
     private Animator anim;
+    private AudioSource door;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        door = GetComponentInChildren<AudioSource>();
     }
     void OnTriggerEnter(Collider other)
     {
@@ -17,6 +19,7 @@ public class DoorCollider_isTrigger : MonoBehaviour
         {
             //anim.enabled = true;
             anim.SetBool("Collider_Inside", true);
+            door.Play();
         }
     }
     void OnTriggerExit(Collider other)
