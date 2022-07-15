@@ -101,4 +101,9 @@ public class StartGame : MonoBehaviour
     {
         OVRInput.SetControllerVibration(0.5f, 0.8f, OVRInput.Controller.All);
     }
+
+    public void ElectricOnline()
+    {
+        Online = true;
+    }
 }
