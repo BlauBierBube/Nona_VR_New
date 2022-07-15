@@ -16,6 +16,7 @@ public class StartGame : MonoBehaviour
     public AudioSource TextWiederhergestellt;
 
     public bool Online = false;
+    private bool isplaying = false;
 
     public float ExplosionZeit = 1f;
     public float currentOff = 3f;
@@ -44,9 +45,8 @@ public class StartGame : MonoBehaviour
         {
             Sirene.Stop();
             TextSirene.Stop();
-
-            Invoke("currentOnline", 1f);
-
+            if(!isplaying)
+                Invoke("currentOnline", 1f);
 
         }
     }
@@ -86,6 +86,7 @@ public class StartGame : MonoBehaviour
 
     void currentOnline()
     {
+        isplaying = true;
         CurrentOn.Play();
         colorAdjustments.colorFilter.value = Color.white;
         Invoke("wiederhergestelt", currentOn);
