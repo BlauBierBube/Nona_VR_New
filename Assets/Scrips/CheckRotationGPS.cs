@@ -10,6 +10,7 @@ public class CheckRotationGPS : MonoBehaviour
     public TextMeshPro Textfield;
     public TextMeshPro Textfield1;
     public TextMeshPro Textfield2;
+    public TextMeshPro FunkFrequenz;
 
     private Vector3 oldRotation;
     private Vector3 currentRotation;
@@ -44,7 +45,7 @@ public class CheckRotationGPS : MonoBehaviour
     }
     void Update()
     {
-        if (currentRotation.y <= (FrequenceBereichText + 1) && currentRotation.y >= (FrequenceBereichText - 1))
+        if (currentRotation.y <= (FrequenceBereichText + 3) && currentRotation.y >= (FrequenceBereichText - 3))
         {
             StartWait = true;
             StartCoroutine(WaitSec());
@@ -113,6 +114,7 @@ public class CheckRotationGPS : MonoBehaviour
 
                 Textfield1.text = Mathf.Round(Noice.volume) + " V.Noice";
                 Textfield2.text = Mathf.Round(Text.volume) + " V.Text";
+                FunkFrequenz.text = Mathf.Round(transform.localEulerAngles.y) +" MHz";
 
                 
 
