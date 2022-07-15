@@ -7,14 +7,14 @@ using UnityEngine.Events;
 
 public class CheckRotationGPS : MonoBehaviour
 {
-    //public TextMeshPro Textfield;
+    public TextMeshPro Textfield;
     public TextMeshPro Textfield1;
     public TextMeshPro Textfield2;
 
     private Vector3 oldRotation;
     private Vector3 currentRotation;
 
-
+    private bool isplaying = false;
     private bool isRight = false;
     private bool StartWait = false;
     private float mainVolume = 1f;
@@ -54,8 +54,8 @@ public class CheckRotationGPS : MonoBehaviour
             StartWait = false;
             StopAllCoroutines();
         }
-        Textfield1.text = Noice.volume + " V.Noice";
-        Textfield2.text = Text.volume + " V.Text";
+        Textfield1.text = Mathf.Round(Noice.volume) + " V.Noice";
+        Textfield2.text = Mathf.Round(Text.volume) + " V.Text";
 
 
         if (currentRotation != transform.localEulerAngles)
@@ -111,8 +111,8 @@ public class CheckRotationGPS : MonoBehaviour
                 }
 
 
-                Textfield1.text = Noice.volume + " V.Noice";
-                Textfield2.text = Text.volume + " V.Text";
+                Textfield1.text = Mathf.Round(Noice.volume) + " V.Noice";
+                Textfield2.text = Mathf.Round(Text.volume) + " V.Text";
 
                 
 
@@ -121,23 +121,28 @@ public class CheckRotationGPS : MonoBehaviour
 
     IEnumerator WaitSec()
     {
-        yield return new WaitForSeconds(10);
-        if (StartWait == true)
-        {
-            Text.volume = 0;
-            Noice.volume = 0;
-            Text.Stop();
-            Noice.Stop();
-            Text1.Play();
-            Text1.volume = 1;
-            onSolved.Invoke();
-            StopAllCoroutines();
-        }
+        yield return new WaitForSeconds(4);
+        if(!isplaying)
+            Auftrag();
     }
 
-    // return true if rotating clockwise
-    // return false if rotating counterclockwise
-    bool GetRotateDirection(Vector3 from, Vector3 to)
+    private void Auftrag()
+    {
+        isplaying = true;
+        StopAllCoroutines();
+        Text.volume = 0;
+        Noice.volume = 0;
+        Text.Stop();
+        Noice.Stop();
+        Text1.Play();
+        Text1.volume = 1;
+        Textfield.text = "is Solved";
+        onSolved.Invoke();
+    }
+
+// return true if rotating clockwise
+// return false if rotating counterclockwise
+bool GetRotateDirection(Vector3 from, Vector3 to)
     {
         float fromY = from.y;
         float toY = to.y;

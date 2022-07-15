@@ -13916,6 +13916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 982937926}
   - component: {fileID: 982937927}
+  - component: {fileID: 982937928}
   m_Layer: 0
   m_Name: Text2
   m_TagString: Untagged
@@ -14034,6 +14035,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &982937928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982937925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea529fdef079dd64ea04c253a9d600b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &987746527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46027,7 +46040,6 @@ GameObject:
   m_Component:
   - component: {fileID: 837072958570969875}
   - component: {fileID: 837072958570969874}
-  - component: {fileID: 837072958570969901}
   m_Layer: 0
   m_Name: Text1
   m_TagString: Untagged
@@ -46146,18 +46158,6 @@ Transform:
   m_Father: {fileID: 837072958370861583}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &837072958570969901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837072958570969872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea529fdef079dd64ea04c253a9d600b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &837072958587900032
 GameObject:
   m_ObjectHideFlags: 0
@@ -46520,7 +46520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28bd25e41bea4a14489a28a0ef481545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bias: 6
+  bias: 0.4
   timeStep: 0.15
   timeToBeat: 0.05
   restSmoothTime: 5
@@ -49290,7 +49290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &837072958982860598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104873,6 +104873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa824174d7aa7c45914e27c536f6ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Textfield: {fileID: 837072958982860599}
   Textfield1: {fileID: 837072959155014707}
   Textfield2: {fileID: 837072958892804769}
   Noice: {fileID: 837072958196672724}
