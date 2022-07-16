@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using TMPro;
 public class LeverPositionTarget : MonoBehaviour
 {
-    private float targetPosition = -3.41f;
+    private float targetPosition = 0.09f;
     public TextMeshPro Textfeld;
 
     public UnityEvent onSolved;
@@ -13,7 +13,7 @@ public class LeverPositionTarget : MonoBehaviour
     // Start is called before the first frame update
     private void Update()
     {
-        if (transform.localPosition.y >= targetPosition)
+        if (transform.localPosition.y <= targetPosition)
         {
             Debug.Log("PositionReached.");
             LeverPushed();
