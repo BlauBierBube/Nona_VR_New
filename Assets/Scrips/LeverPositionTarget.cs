@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using TMPro;
 public class LeverPositionTarget : MonoBehaviour
 {
-    private float targetPosition = 0.09f;
+    private float targetPosition = -3.41f;
     public TextMeshPro Textfeld;
 
     public UnityEvent onSolved;
