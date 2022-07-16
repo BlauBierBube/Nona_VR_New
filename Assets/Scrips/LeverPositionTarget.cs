@@ -13,7 +13,7 @@ public class LeverPositionTarget : MonoBehaviour
     // Start is called before the first frame update
     private void Update()
     {
-        if (transform.localPosition.y <= targetPosition)
+        if (transform.localPosition.y >= targetPosition)
         {
             Debug.Log("PositionReached.");
             LeverPushed();
