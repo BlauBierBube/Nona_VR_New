@@ -2210,7 +2210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132126248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6067558, y: 0.39288783, z: 1.5733457}
+  m_LocalPosition: {x: -0.6067558, y: 0, z: 1.5733457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3108,7 +3108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
+  _pointable: {fileID: 161334736}
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
@@ -13091,7 +13091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
+  _pointable: {fileID: 587055586}
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
@@ -13489,7 +13489,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f948bee01e40013448657bd47622bd39, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4302509285647854307, guid: a3951adce8b3e434c85c49ffe9fb91ed, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4302509285647854309, guid: a3951adce8b3e434c85c49ffe9fb91ed, type: 3}
       insertIndex: -1
@@ -16964,7 +16965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
+  _pointable: {fileID: 716838784}
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
@@ -21466,7 +21467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
+  _pointable: {fileID: 932110595}
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
@@ -24669,7 +24670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
+  _pointable: {fileID: 1039519739}
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
@@ -31275,7 +31276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
+  _pointable: {fileID: 1204366452}
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
@@ -34393,7 +34394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 643668452912838867, guid: 59addc1821ef4554f9c104fcfcff4f4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.37
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 643668452912838867, guid: 59addc1821ef4554f9c104fcfcff4f4f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34443,6 +34444,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1077646528125934838, guid: 59addc1821ef4554f9c104fcfcff4f4f, type: 3}
+      propertyPath: _trackingOriginType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1077646528132871474, guid: 59addc1821ef4554f9c104fcfcff4f4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.4
@@ -34453,7 +34458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1077646528132871484, guid: 59addc1821ef4554f9c104fcfcff4f4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9123539725761109269, guid: 59addc1821ef4554f9c104fcfcff4f4f, type: 3}
       propertyPath: m_RenderPostProcessing
@@ -37773,7 +37778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
+  _pointable: {fileID: 1455707883}
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
@@ -45313,7 +45318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
+  _pointable: {fileID: 1738891095}
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
