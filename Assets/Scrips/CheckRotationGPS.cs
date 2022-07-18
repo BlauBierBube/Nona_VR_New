@@ -140,7 +140,8 @@ public class CheckRotationGPS : MonoBehaviour
         Text1.volume = 1;
         Textfield.text = "is Solved";
         onSolved.Invoke();
-    }
+        FunkFrequenz.text = "Verbindung Hergestellt";
+}
 
 // return true if rotating clockwise
 // return false if rotating counterclockwise
