@@ -24,6 +24,9 @@ public class StartGame : MonoBehaviour
     public float NotfallZeit = 3f;
     public float NotfallLoop = 10f;
     public float currentOn = 1f;
+    public float redLight = 1f;
+    public float whiteLight = 2f;
+
     ColorAdjustments colorAdjustments;
     Bloom bloom;
     ChromaticAberration chromatic;
@@ -74,7 +77,7 @@ public class StartGame : MonoBehaviour
         Sirene.Play();
         Invoke("texts", NotfallZeit);
 
-        colorAdjustments.colorFilter.value = Color.red;
+        Invoke("RedLight",0);
 
     }
     void texts()
@@ -82,6 +85,24 @@ public class StartGame : MonoBehaviour
         TextSirene.Play();
         if (!Online)
             Invoke("texts", NotfallLoop);
+    }
+    void RedLight()
+    {
+        if (!Online)
+        {
+            colorAdjustments.colorFilter.value = Color.red;
+            Invoke("WhiteLight", redLight);
+        }
+
+    }
+    void WhiteLight()
+    {
+        if (!Online)
+        {
+            colorAdjustments.colorFilter.value = Color.white;
+            Invoke("RedLight", whiteLight);
+        }
+
     }
 
     void currentOnline()
