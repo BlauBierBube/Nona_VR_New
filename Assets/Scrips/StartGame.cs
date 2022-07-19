@@ -34,7 +34,7 @@ public class StartGame : MonoBehaviour
     //public void OnLevelWasLoaded()
     void Start()
     {
-        Invoke("startgame", ExplosionZeit);
+        
         
         PostProcessEffect.profile.TryGet<ColorAdjustments>(out colorAdjustments);
         //PostProcessEffect.profile.TryGet<Bloom>(out bloom);
@@ -53,7 +53,10 @@ public class StartGame : MonoBehaviour
 
         }
     }
-
+    public void start()
+    {
+        Invoke("startgame", ExplosionZeit);
+    }
 
     void startgame()
     {

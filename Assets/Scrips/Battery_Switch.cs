@@ -23,7 +23,6 @@ public class Battery_Switch : MonoBehaviour
 
     private void Update()
     {
-
         if (transform.localEulerAngles.z <= lockedRotation)
         {
             Locked();

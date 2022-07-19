@@ -11,6 +11,7 @@ public class CheckRotationGPS : MonoBehaviour
     public TextMeshPro Textfield1;
     public TextMeshPro Textfield2;
     public TextMeshPro FunkFrequenz;
+    public TextMeshPro AudioOffline;
 
     private Vector3 oldRotation;
     private Vector3 currentRotation;
@@ -141,6 +142,7 @@ public class CheckRotationGPS : MonoBehaviour
         Textfield.text = "is Solved";
         onSolved.Invoke();
         FunkFrequenz.text = "Verbindung Hergestellt";
+        AudioOffline.text = "Online";
 }
 
 // return true if rotating clockwise

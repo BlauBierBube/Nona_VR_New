@@ -11,6 +11,7 @@ public class ChangeText_3Numbers : MonoBehaviour
     public TextMeshPro Textfield_Top;
     public TextMeshPro Textfield_Mid;
     public TextMeshPro Textfield_Bot;
+    public TextMeshPro GPSOffline;
 
     public float targetNumber_01 = 40;
     public float targetNumber_02 = 40;
@@ -43,6 +44,7 @@ public class ChangeText_3Numbers : MonoBehaviour
         if (check_01 && check_02 && check_03 == true)
         {
             onSolved.Invoke();
+            GPSOffline.text = "Online";
             Debug.Log(this.gameObject.name + " is Solved");
         }
     }
