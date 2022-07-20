@@ -57,7 +57,7 @@ Material:
     - _Alpha: 0.25
     - _IOR: 0.015
     - _Metalic: 0
-    - _NormalStrength: 0.5
+    - _NormalStrength: 0.125
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.35

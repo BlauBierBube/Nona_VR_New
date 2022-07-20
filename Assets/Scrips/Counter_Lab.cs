@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Counter_Lab : MonoBehaviour
 {
     private int Count;
+    private bool isActive = false;
     public UnityEvent OnSolved;
 
     // Start is called before the first frame update
@@ -17,10 +18,16 @@ public class Counter_Lab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Count == 3)
+        if(Count == 3 && !isActive)
         {
-            OnSolved.Invoke();
+            FinalCount();
         }
+    }
+
+    private void FinalCount()
+    {
+        isActive = true;
+        OnSolved.Invoke();
     }
 
     public void AddCount()

@@ -17296,7 +17296,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 77d6645a9db0f434cbc7d1b764ef4e4f, type: 2}
-  m_CullingMode: 2
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -25059,6 +25059,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5575561222193669761, guid: abee3c87c5b071c489fb138cd30f9d77, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -3832569219399802665, guid: abee3c87c5b071c489fb138cd30f9d77, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -25093,23 +25097,23 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3d9db4ed380070d4fb12367b68fdf10b, type: 2}
     - target: {fileID: 4642385844259593395, guid: abee3c87c5b071c489fb138cd30f9d77, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.61237246
+      value: 0.5869073
       objectReference: {fileID: 0}
     - target: {fileID: 4642385844259593395, guid: abee3c87c5b071c489fb138cd30f9d77, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.3535534
+      value: -0.39438537
       objectReference: {fileID: 0}
     - target: {fileID: 4642385844259593395, guid: abee3c87c5b071c489fb138cd30f9d77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.61237246
+      value: 0.5869073
       objectReference: {fileID: 0}
     - target: {fileID: 4642385844259593395, guid: abee3c87c5b071c489fb138cd30f9d77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.3535534
+      value: 0.39438537
       objectReference: {fileID: 0}
     - target: {fileID: 4642385844259593395, guid: abee3c87c5b071c489fb138cd30f9d77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 60
+      value: -67.8
       objectReference: {fileID: 0}
     - target: {fileID: 4642385844259593395, guid: abee3c87c5b071c489fb138cd30f9d77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -40902,6 +40906,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfeld: {fileID: 1393599087}
+  Switch: {fileID: 0}
+  Abdocken: {fileID: 0}
   onSolved:
     m_PersistentCalls:
       m_Calls:
@@ -46870,7 +46876,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2146461505}
-  - component: {fileID: 2146461506}
   - component: {fileID: 2146461504}
   - component: {fileID: 2146461503}
   - component: {fileID: 2146461502}
@@ -46965,26 +46970,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!95 &2146461506
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146461501}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19662946c58dc6548994427bcf375a48, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &3184619336057494
 MeshRenderer:
   m_ObjectHideFlags: 0

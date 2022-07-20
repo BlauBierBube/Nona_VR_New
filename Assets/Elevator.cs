@@ -8,7 +8,7 @@ public class Elevator : MonoBehaviour
     public float speed = 1f;
     public Vector3 target;
     public GameObject Rig;
-    public AudioSource Audio;
+    ///public AudioSource Audio;
 
     public void Start()
     {
@@ -29,8 +29,8 @@ public class Elevator : MonoBehaviour
         Invoke("Speech", 6);
     }
 
-    private void Speech()
+    /*private void Speech()
     {
         Audio.Play();
-    }
+    }*/
 }

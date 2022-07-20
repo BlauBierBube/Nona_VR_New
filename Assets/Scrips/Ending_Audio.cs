@@ -6,6 +6,8 @@ public class Ending_Audio : MonoBehaviour
 {
     public AudioSource Sprecher;
     public float Time = 4f;
+    public float Time_Credits = 8f;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +29,17 @@ public class Ending_Audio : MonoBehaviour
     private void TriggerAudio()
     {
         Sprecher.Play();
+    }
+
+
+    public void Credits()
+    {
+        Invoke("RollCredits", Time_Credits);
+    }
+
+
+    private void RollCredits()
+    {
+        anim.SetBool("GameEnd", true);
     }
 }

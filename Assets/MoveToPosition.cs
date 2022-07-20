@@ -31,7 +31,7 @@ public class MoveToPosition : MonoBehaviour
 
             if (Vector3.Distance(transform.position, target) < 0.001f)
             {
-                Debug.LogError("is On Finish");
+                ///Debug.LogError("is On Finish");
                 isOnFinish.Invoke();
                 ontarget = true;
                 onstart = false;
@@ -45,7 +45,7 @@ public class MoveToPosition : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, startposition, step);
             if (Vector3.Distance(transform.position, startposition) < 0.001f)
             {
-                Debug.LogError("is On Start");
+                ///Debug.LogError("is On Start");
                 isOnStart.Invoke();
                 onstart = true;
                 ontarget = false;
