@@ -34,7 +34,7 @@ public class LeverRotationTarget : MonoBehaviour
         isActive = true;
         Textfeld.text = "RETTUNGSKAPSEL ERFOLGREICH GELÖST - GUTE REISE";
         Switch.Play();
-        Invoke("abdock", 2f);
+        Invoke("abdock", 1f);
         onSolved.Invoke();
     }
     void abdock()

@@ -29,11 +29,11 @@ Shader "Interaction/RoundedBoxUnlit"
 
     SubShader
     {
-        Tags {"Queue"="Transparent" "RenderType"="Transparent"}
-        ZWrite Off
-        Blend SrcAlpha OneMinusSrcAlpha
-        ZTest [_ZTest]
-        LOD 100
+        //Tags {"Queue"="Transparent" "RenderType"="Transparent"}
+        //ZWrite Off
+        //Blend SrcAlpha OneMinusSrcAlpha
+        //ZTest [_ZTest]
+        //LOD 100
 
         Pass
         {

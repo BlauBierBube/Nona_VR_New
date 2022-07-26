@@ -7,6 +7,8 @@ public class Counter_Lab : MonoBehaviour
 {
     private int Count;
     private bool isActive = false;
+    public AudioSource SprecherEnding;
+    public float Time = 10f;
     public UnityEvent OnSolved;
 
     // Start is called before the first frame update
@@ -21,6 +23,7 @@ public class Counter_Lab : MonoBehaviour
         if(Count == 3 && !isActive)
         {
             FinalCount();
+            
         }
     }
 
@@ -28,6 +31,13 @@ public class Counter_Lab : MonoBehaviour
     {
         isActive = true;
         OnSolved.Invoke();
+        Invoke("SprecherAudio", Time);
+    }
+
+    
+    private void SprecherAudio()
+    {
+        SprecherEnding.Play();
     }
 
     public void AddCount()
