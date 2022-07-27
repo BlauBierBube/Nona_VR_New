@@ -21,12 +21,13 @@ public class Power_Switch : MonoBehaviour
     void Start()
     {
         Textfeld.text = "Power Off";
-        material.SetColor("_BaseColor", new Color(0.9622641f, 0.231488f, 0.231488f, 1));
+        material.SetColor("_EmissionColor", new Color(0.9622641f, 0.231488f, 0.231488f, 1));
     }
 
     private void Update()
     {
-        if (transform.localEulerAngles.x >= targetRotation && isActiv == false)
+        //Debug.LogError(transform.eulerAngles.x);
+        if (transform.eulerAngles.x <= targetRotation && transform.eulerAngles.x >= 100 && isActiv == false)
         {
             PowerOn();
         }
@@ -40,7 +41,7 @@ public class Power_Switch : MonoBehaviour
         onSolved.Invoke();
         isActiv = true;
 
-        material.SetColor("_BaseColor", new Color(0.3361072f, 0.7830188f, 0.3612165f, 1));
+        material.SetColor("_EmissionColor", new Color(0.3361072f, 0.7830188f, 0.3612165f, 1));
 
     }
 }
