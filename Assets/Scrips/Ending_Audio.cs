@@ -40,6 +40,6 @@ public class Ending_Audio : MonoBehaviour
 
     private void RollCredits()
     {
-        anim.SetBool("GameEnd", true);
+        anim.SetBool("Game_End", true);
     }
 }

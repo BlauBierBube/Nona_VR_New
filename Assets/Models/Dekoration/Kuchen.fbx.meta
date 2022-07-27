@@ -3,7 +3,22 @@ guid: 21a69019175f9d7468726dd2c1f97614
 ModelImporter:
   serializedVersion: 22102
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kirsche
+    second: {fileID: 2100000, guid: 9c84b49a76d901249b47a6622a5f57a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sahne
+    second: {fileID: 2100000, guid: cf49c8abfb76ff646bc7e5e5b0b3299e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teig
+    second: {fileID: 2100000, guid: 533d9f0316862de43af7b7cf0fd2b729, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
