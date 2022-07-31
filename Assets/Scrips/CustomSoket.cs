@@ -45,6 +45,8 @@ public class CustomSoket : MonoBehaviour
             //Debug.LogError(other.gameObject.name +" Hit with Layermask");
             Target = other.gameObject;
             HoverObject();
+
+            //If Target Object is grabbed and not actual in soket ( it would activate itself )
             if (Target.GetComponentInParent<Grabbable>()._activeTransformer != null && wasInSoket == true)
             {
                 count = 0;
@@ -58,6 +60,7 @@ public class CustomSoket : MonoBehaviour
                 wasInSoket = false;
             }
 
+            //If Target Object get released in target area
             if (Target.GetComponentInParent<Grabbable>()._activeTransformer == null)
             {
                 PlaceAtSoket();
@@ -66,7 +69,7 @@ public class CustomSoket : MonoBehaviour
     }
     private void PlaceAtSoket()
     {
-
+        //place the Target Object in the Socket ( attach ) 
         if (count == 0)
         {
             DestroyHoverObject();
@@ -89,7 +92,7 @@ public class CustomSoket : MonoBehaviour
     }
 
 
-
+    //Create an instance of the target Object
     private void HoverObject()
     {
         if (hoverObject == null && wasInSoket == false)
@@ -102,6 +105,8 @@ public class CustomSoket : MonoBehaviour
 
             //hoverObject.GetComponent<MeshRenderer>().material = HoverMat;
 
+
+            //Replace all Materials with the hover Material
             MeshRenderer[] ren;
             ren = hoverObject.GetComponents<MeshRenderer>();
             foreach (MeshRenderer rend in ren)
